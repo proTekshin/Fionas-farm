@@ -78,10 +78,7 @@ footer {
     justify-content: center;
     color: var(--green);
 }
-a {
-    text-align: center;
-}
-button {
+.produce-button {
     background-color: var(--orange);
     color: var(--white);
     width: 300px;
@@ -91,11 +88,14 @@ button {
     border: 2px solid var(--white);
     border-radius: 4px;
     font-family: Habibi;
+    text-align: center;
+    text-decoration: none;
 }
 .main-buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin-top: 30px;
 }
 .top-button {
@@ -129,9 +129,6 @@ h2, p {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 12px;
-}
-@media screen and (min-width: 428px) {
-
 }
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
@@ -176,7 +173,7 @@ h2, p {
         top: -130px;
         right: 0px;
     }
-    button {
+    .produce-button {
         margin-right: 20px;
     }
     section {
