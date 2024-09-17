@@ -1,0 +1,198 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+
+ 
+/*-------------------- CSS RESET ---------------------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0; 
+    padding: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+header,h1,h2,h3 {
+    font-family: 'Irish Grover';
+ }
+h1 {
+    font-size: 2.5em;
+    line-height: 2;
+    text-shadow: 2px 1px 3px var(--black);
+}
+h2 {
+    font-size: 1.75em;
+    margin-top: 20px;
+}
+h3 {
+    font-size: 1.25em;
+}
+p,button,a, address, ol li {
+    font-size: 1.25em;
+    font-family: Habibi;
+}
+address {
+    font-style:normal;
+}
+ol {
+    list-style-type: none;
+}
+header, section {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+header {
+    margin-bottom: 20px;
+}
+section {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+}
+a {
+    text-align: center;
+}
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 300px;
+    border: none;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    font-family: Habibi;
+}
+.main-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.top-button {
+    background-color: var(--orange);
+    padding: 12px;
+    text-decoration: none;
+    color: var(--white);    
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 18px;
+    right: 0px;
+}
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 40px auto;
+}
+.item-label {
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, .65);
+}
+h2, p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+}
+@media screen and (min-width: 428px) {
+
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 834px) {
+    .main-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main.item-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fruits, .vegetables {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1280px) {
+    .fruits, .vegetables {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-buttons {
+        position: absolute;
+        top: -130px;
+        right: 0px;
+    }
+    button {
+        margin-right: 20px;
+    }
+    section {
+        display: flex;
+        justify-content: space-around;
+    }
+    section div {
+        display: flex;
+        width: 35%;
+        justify-content: space-around;
+    }
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1440px) {
+    .fruits, .vegetables {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
