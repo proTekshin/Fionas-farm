@@ -106,9 +106,10 @@ footer {
     border: 2px solid var(--white);
     border-radius: 4px;
     font-weight: 700;
-    position: absolute;
+    position: fixed;
     bottom: 18px;
     right: 0px;
+    z-index: 100;
 }
 .item-container {
     display: flex;
